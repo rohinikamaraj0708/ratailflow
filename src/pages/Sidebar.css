@@ -56,7 +56,7 @@
 }
 
 .sidebar ul li:hover {
-  background-color: #0ba25b;
+  background-color: #0ba25b!important;
 }
 
 .sidebar ul li:hover a {
