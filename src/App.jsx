@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, Navigate } from "react-router-dom";
 
 // Importing all pages from the src/pages folder
 import Sidebar from "./pages/Sidebar";
@@ -21,8 +21,11 @@ function App() {
       {/* Dynamic Right Side Workspace Routing view wrapper */}
       <main className="main-content">
         <Routes>
-          {/* Dashboard Route */}
-          <Route path="/" element={<Dashboard />} />
+          {/* 🎯 முதலில் வெப்சைட் ஓபன் ஆகும்போதே தானாக /dashboard-க்கு மாற்றிவிடும் */}
+          <Route path="/" element={<Navigate to="/dashboard" replace />} />
+
+          {/* Actual Dashboard Route */}
+          <Route path="/dashboard" element={<Dashboard />} />
 
           {/* Products Route */}
           <Route path="/products" element={<Products />} />
@@ -37,7 +40,10 @@ function App() {
           <Route path="/invoices" element={<Invoices />} />
            
           {/* Settings Route */}
-          <Route path="/settings" element={<Settings />} /> {/* ✅ Ippo indha route perfect-ah work aagum */}
+          <Route path="/settings" element={<Settings />} />
+          
+          
+          <Route path="*" element={<Navigate to="/dashboard" replace />} />
         </Routes>
       </main>
     </div>
