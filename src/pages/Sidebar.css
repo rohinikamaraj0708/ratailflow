@@ -1,64 +1,51 @@
 .sidebar {
   width: 220px;
   height: 100vh;
-  background-color: white!important;
-  color: black!important;
+  background-color: white !important;
+  color: black !important;
   padding: 20px;
   position: fixed;
   left: 0;
   top: 0;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* சைடுபார்க்கு ஒரு மெல்லிய நிழல் */
 }
 
+/* லோகோ செக்ஷன் (டூப்ளிகேட் வரிகள் நீக்கப்பட்டது) */
 .logo {
-    color: #0ba25b !important;;
+  color: #0ba25b !important;
   margin-bottom: 30px;
   font-size: 22px;
- 
   display: flex;
   align-items: center;
   gap: 10px;
-  color: #0ba25b;
-  font-size: 22px;
-
+  font-weight: bold;
 }
 
 .sidebar ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .sidebar ul li {
-  padding: 12px;
-  margin: 8px 0;
-  cursor: pointer;
-  border-radius: 6px;
-}
-
-.sidebar ul li:hover {
-  background-color: #0ba25b!important;
-}
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-}
-
-.sidebar ul li {
-  padding: 12px;
   margin: 8px 0;
   border-radius: 8px;
+  transition: background-color 0.3s ease; 
 }
 
 .sidebar ul li a {
   text-decoration: none;
-  color: black;
+  color: black !important; 
   display: block;
+  padding: 12px;
   font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
 }
 
-.sidebar ul li:hover {
-  background-color: #0ba25b!important;
-}
 
-.sidebar ul li:hover a {
-  color: white;
+.sidebar ul li a:hover {
+  background-color: #0ba25b !important;
+  color: white !important;
 }
