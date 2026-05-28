@@ -1,0 +1,279 @@
+/* PAGE */
+.billing-page {
+  padding: 20px;
+  background: #d6dde0;
+  min-height: 100vh;
+  font-family: sans-serif;
+}
+
+.billing-page h1 {
+  margin: 0;
+  font-size: 40px;
+}
+
+.billing-page p {
+  color: #555;
+  margin-top: 8px;
+  margin-bottom: 30px;
+}
+
+/* TOP */
+.billing-top {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 25px;
+  margin-bottom: 25px;
+}
+
+/* SEARCH & CUSTOMER BOX */
+.search-box,
+.customer-box {
+  background: #f5f5f5;
+  border: 1px solid #aaa;
+  border-radius: 25px;
+  padding: 25px;
+}
+
+.search-input {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: white;
+  border: 1px solid #bbb;
+  border-radius: 18px;
+  padding: 18px;
+}
+
+.search-input input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 18px;
+}
+
+.mic-btn {
+  margin-top: 15px;
+  width: 60px;
+  height: 60px;
+  border: none;
+  border-radius: 16px;
+  background: #4f9d24;
+  color: white;
+  cursor: pointer;
+}
+
+/* CUSTOMER */
+.customer-box h3 {
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.customer-box input {
+  width: 100%;
+  padding: 18px;
+  border-radius: 18px;
+  border: 1px solid #bbb;
+  font-size: 18px;
+  outline: none;
+  box-sizing: border-box; 
+}
+/* MAIN GRID */
+.billing-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 25px;
+}
+
+/* PANELS */
+.products-panel,
+.invoice-panel {
+  background: #f5f5f5;
+  border: 1px solid #999;
+  border-radius: 25px;
+  overflow: hidden;
+}
+
+.products-list {
+  max-height: 500px;
+  overflow-y: auto;
+}
+
+/* HEADER */
+.panel-header,
+.invoice-header {
+  padding: 25px;
+  border-bottom: 1px solid #999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* PRODUCT CARD */
+.product-card {
+  background: white;
+  border: 1px solid #bbb;
+  border-radius: 18px;
+  margin: 15px;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.product-card:hover {
+  transform: scale(1.01);
+}
+
+.product-card h3 {
+  margin: 0;
+}
+
+.product-card p {
+  margin-top: 8px;
+  color: #777;
+}
+
+/* TABLE */
+.invoice-table {
+  width: 100%;
+}
+
+.table-head,
+.table-row {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1fr 60px;
+  align-items: center;
+  padding: 20px;
+  border-bottom: 1px solid #aaa;
+}
+
+.table-head {
+  background: #dfe5d7;
+  font-weight: bold;
+}
+
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.qty-box button {
+  width: 30px;
+  height: 30px;
+  border: none;
+  border-radius: 6px;
+  background: #ddd;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+/* TOTALS */
+.totals {
+  padding: 25px;
+}
+
+.totals div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 18px;
+  font-size: 18px;
+}
+
+.grand-total {
+  font-size: 24px !important;
+  font-weight: bold;
+  border-top: 1px solid #aaa;
+  padding-top: 20px;
+}
+
+/* BUTTONS */
+/* BUTTONS CONTAINER */
+.bill-buttons {
+  display: flex;
+  gap: 12px;         
+  padding: 20px;     
+  width: 100%;       
+  box-sizing: border-box; 
+}
+
+.bill-buttons button {
+  flex: 1;
+  min-width: 0;     
+  border: none;
+  border-radius: 14px; 
+  padding: 14px 8px;   
+  font-size: 16px;     
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+
+.bill-buttons button svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}
+
+.generate-btn { background: #4f9d24; }
+.save-btn { background: #d9c63f; }
+.print-btn { background: #3da1c9; }
+
+/* --- PRINT STYLES --- */
+/* Normal Screen-il Print View-ஐ மறைத்து வைக்கவும் */
+.printable-invoice {
+  display: none;
+}
+
+@media print {
+  /* Screen-il உள்ள மற்ற அனைத்து எலிமெண்ட்டுகளையும் பிரிண்ட்டின் போது மறைக்கவும் */
+  body * {
+    visibility: hidden;
+  }
+  
+  /* Print Invoice-ஐ மட்டும் காண்பிக்கவும் */
+  .printable-invoice, .printable-invoice * {
+    visibility: visible;
+  }
+  
+  /* அதை பக்கத்தின் மேல் பகுதியில் சரியாக பொருத்தவும் */
+  .printable-invoice {
+    display: block !important;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 20px;
+    background: white;
+    color: black;
+    font-family: monospace; /* பில் போன்று தோற்றமளிக்க */
+  }
+
+  .print-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+
+  .print-table th, .print-table td {
+    border-bottom: 1px dashed #000;
+    padding: 8px;
+    text-align: left;
+  }
+
+  .print-totals {
+    text-align: right;
+    margin-top: 15px;
+  }
+}

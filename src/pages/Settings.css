@@ -1,0 +1,351 @@
+/* Container workspace layout styles */
+.settings-page-wrapper {
+  background-color: #d3dde2; /* Layout default soft slate-grey tone background */
+  min-height: 100vh;
+  padding: 40px 30px 100px 30px; /* Spacing added down for action bar padding */
+  font-family: 'Inter', -apple-system, sans-serif;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* Header Description Layouts */
+.settings-header-section h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 6px 0;
+}
+
+.settings-header-section p {
+  font-size: 14px;
+  color: #475569;
+  margin: 0 0 28px 0;
+}
+
+.settings-form-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  width: 100%;
+}
+
+/* Outer Rounded Content Panel Boxes */
+.settings-card-panel {
+  background-color: #ffffff;
+  border-radius: 24px;
+  padding: 32px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.01);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.settings-card-panel h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0 0 24px 0;
+}
+
+/* Fields grid layouts architecture */
+.fields-grid-2x2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.input-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.input-field-group label {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Matching inputs border box curves */
+.input-field-group input,
+.input-field-group textarea {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1.5px solid #b0bec5;
+  border-radius: 14px;
+  padding: 14px 18px;
+  font-size: 16px;
+  color: #334155;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.input-field-group input::placeholder,
+.input-field-group textarea::placeholder {
+  color: #94a3b8;
+}
+
+.full-width-field {
+  margin-top: 24px;
+  width: 100%;
+}
+
+.inline-logo-block {
+  margin-top: 24px;
+  align-items: start;
+}
+
+/* File Upload dashed box mockup styles */
+.logo-upload-dash-box {
+  border: 1.5px dashed #94a3b8;
+  border-radius: 14px;
+  padding: 16px;
+  text-align: center;
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.upload-icon-svg {
+  color: #64748b;
+  margin-bottom: 8px;
+}
+
+.logo-upload-dash-box p {
+  font-size: 13px;
+  color: #475569;
+  margin: 0 0 4px 0;
+}
+
+.logo-upload-dash-box span {
+  font-size: 11px;
+  color: #94a3b8;
+}
+
+/* Template Select Cards Rows Stack */
+.template-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.template-select-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 20px 24px;
+  cursor: pointer;
+  background-color: #ffffff;
+  transition: border-color 0.2s;
+}
+
+.template-select-row.active-border {
+  border-color: #48992d;
+}
+
+.template-meta-info h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 6px 0;
+}
+
+.template-meta-info p {
+  font-size: 14px;
+  color: #475569;
+  margin: 0;
+}
+
+/* Pills Active Green vs Border outlines button match */
+.template-status-pill {
+  border: none;
+  font-size: 15px;
+  font-weight: 600;
+  padding: 10px 24px;
+  border-radius: 12px;
+  cursor: pointer;
+  min-width: 120px;
+}
+
+.template-status-pill.pill-active {
+  background-color: #48992d;
+  color: #ffffff;
+}
+
+.template-status-pill.pill-available {
+  background-color: transparent;
+  border: 1.5px solid #48992d;
+  color: #48992d;
+}
+
+/* Toggle Preferences Rows */
+.toggle-preference-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 20px 24px;
+  margin-bottom: 16px;
+}
+
+.toggle-preference-row:last-child {
+  margin-bottom: 0;
+}
+
+.preference-meta h3 {
+  font-size: 17px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 6px 0;
+}
+
+.preference-meta p {
+  font-size: 14px;
+  color: #475569;
+  margin: 0;
+}
+
+/* Standard Rounded Apple-style Sliders */
+.switch-input-toggle {
+  position: relative;
+  display: inline-block;
+  width: 56px;
+  height: 30px;
+  flex-shrink: 0;
+}
+
+.switch-input-toggle input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider-round-rail {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #cbd5e1;
+  transition: .3s;
+  border-radius: 34px;
+}
+
+.slider-round-rail:before {
+  position: absolute;
+  content: "";
+  height: 22px; width: 22px;
+  left: 4px; bottom: 4px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+input:checked + .slider-round-rail {
+  background-color: #48992d;
+}
+
+input:checked + .slider-round-rail:before {
+  transform: translateX(26px);
+}
+
+/* Appearance Theme Options Grid structure layout */
+.appearance-grid-selection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.theme-card-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.theme-card-option.theme-active-card {
+  border-color: #48992d;
+}
+
+.theme-left-combo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.sun-icon-svg, .moon-icon-svg {
+  color: #334155;
+}
+
+.theme-text-info h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 4px 0;
+}
+
+.theme-text-info p {
+  font-size: 13px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* Radio Circle Check Dot Markers */
+.radio-dot-indicator {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #cbd5e1;
+  border-radius: 50%;
+  position: relative;
+}
+
+.radio-dot-indicator.radio-checked {
+  border-color: #48992d;
+}
+
+.radio-dot-indicator.radio-checked:after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #48992d;
+  border-radius: 50%;
+  top: 3px; left: 3px;
+}
+
+/* Bottom Bottom bar for action button sticky flow layout placement */
+.submission-action-bar {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 12px;
+}
+
+.save-settings-cta-btn {
+  background-color: #48992d;
+  color: #ffffff;
+  border: none;
+  border-radius: 14px;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 10px 15px -3px rgba(72, 153, 45, 0.2);
+  transition: background-color 0.2s;
+}
+
+.save-settings-cta-btn:hover {
+  background-color: #3d8225;
+}
